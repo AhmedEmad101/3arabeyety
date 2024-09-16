@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Transimission extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'Transmission_Name',
+    ];
 }

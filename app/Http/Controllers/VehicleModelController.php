@@ -12,7 +12,7 @@ class VehicleModelController extends Controller
      */
     public function index()
     {
-        //
+        return VehicleModel::all();
     }
 
     /**

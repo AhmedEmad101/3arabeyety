@@ -12,7 +12,7 @@ class MotorController extends Controller
      */
     public function index()
     {
-        //
+        return Motor::all();
     }
 
     /**

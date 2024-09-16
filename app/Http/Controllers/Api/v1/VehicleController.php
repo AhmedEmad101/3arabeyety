@@ -1,65 +1,35 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Api\v1;
 use App\Models\Vehicle;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\VehicleRequest;
 use Illuminate\Http\Request;
 
 class VehicleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
        return Vehicle::all();
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function AddVehicle(VehicleRequest $request)
     {
-        //
+        $Vehicle = Vehicle::create($request->all());
+        return response()->json($Vehicle);;
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function update(Request $request, $id)
     {
-        //
+        $Vehicle = $request->find($id);
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Vehicle $vehicle)
+    public function destroy($id)
     {
-        //
+      Vehicle::destroy($id);
+      return response()->json(['message' => 'Record'.$id . ' deleted successfully ']);
+
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Vehicle $vehicle)
+    public function GetCarModel($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Vehicle $vehicle)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Vehicle $vehicle)
-    {
-        //
+        $Vehicle = Vehicle::where('id',$id)->first();
+        return $Vehicle->CarModel->Name??'NoCarModel';
     }
 }
