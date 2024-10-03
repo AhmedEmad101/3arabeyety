@@ -14,4 +14,9 @@ class DatabaseHelper
         // Return the data as JSON
         return response()->json($data);
     }
+    public static function GetVehicleDetails($id)
+    {
+        $Details = DB::table('vehicles')->where('id',$id)->get();
+        return $Details;
+    }
 }

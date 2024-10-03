@@ -31,5 +31,10 @@ class UserController extends Controller
             'output' => implode("\n", $output),
             'returnVar' => $returnVar
         ]);
+
+}
+ public function User(User $user,$id)
+{
+    return response()->json($user::find($id));
 }
 }

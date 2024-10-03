@@ -1,7 +1,7 @@
 <div class="container-fluid categories py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h1 class="display-5 text-capitalize mb-3">Vehicle <span class="text-primary">Categories</span></h1>
+            <h1 class="display-5 text-capitalize mb-3">Vehicle <span class="text-primary">@yield('n')Categories</span></h1>
             <p class="mb-0">Here you can find the vehicles and it's categories
             </p>
         </div>
@@ -12,11 +12,11 @@
 
 @foreach ($Vehicles as $v)
 
-
             <div class="categories-item p-4">
                 <div class="categories-item-inner">
                     <div class="categories-img rounded-top">
-                        <img src="img/car-4.png" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="{{asset('VehicleImages/'.$v->Photo)}}" class="img-fluid w-100 rounded-top" alt="">
+                        <a href="PassVehicleToView/{{$v->Photo}}"></a>
                     </div>
                     <div class="categories-content rounded-bottom p-4">
                         <h4>{{$v->VehicleModel->Name}}</h4>
@@ -54,12 +54,15 @@
                             </div>
                         </div>
                         <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
+                        <br>
+                        <a href="vehicledetails/{{$v->id}}" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View</a>
                     </div>
 
 
                 </div>
 
             </div>
+
             @endforeach
         </div>
     </div>

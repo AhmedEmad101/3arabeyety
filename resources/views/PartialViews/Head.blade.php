@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title>3arabeyety Website</title>
+    <title>3arabeyety </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -24,4 +24,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{asset('js/testlogout.js') }}"></script>
+    <script src="js/authcheck.js"></script>
+
+
 </head>

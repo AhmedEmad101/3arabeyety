@@ -11,7 +11,7 @@
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -64,40 +64,7 @@
         <!-- Topbar End -->
 
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a href="" class="navbar-brand p-0">
-                        <h1 class="display-6 text-primary"><i class="fas fa-car-alt me-3"></i></i>Cental</h1>
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Service</a>
-                            <a href="blog.html" class="nav-item nav-link">Blog</a>
-                            
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0">
-                                    <a href="feature.html" class="dropdown-item active">Our Feature</a>
-                                    <a href="cars.html" class="dropdown-item">Our Cars</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        </div>
-                        <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
+        @include('PartialViews.navbar')
         <!-- Navbar & Hero End -->
 
         <!-- Header Start -->
@@ -108,78 +75,13 @@
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
                     <li class="breadcrumb-item active text-primary">Feature</li>
-                </ol>    
+                </ol>
             </div>
         </div>
         <!-- Header End -->
 
         <!-- Features Start -->
-        <div class="container-fluid feature py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Features</span></h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
-                    </p>
-                </div>
-                <div class="row g-4 align-items-center">
-                    <div class="col-xl-4">
-                        <div class="row gy-4 gx-0">
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <span class="fa fa-trophy fa-2x"></span>
-                                    </div>
-                                    <div class="ms-4">
-                                        <h5 class="mb-3">First Class services</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <span class="fa fa-road fa-2x"></span>
-                                    </div>
-                                    <div class="ms-4">
-                                        <h5 class="mb-3">24/7 road assistance</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="img/features-img.png" class="img-fluid w-100" style="object-fit: cover;" alt="Img">
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="row gy-4 gx-0">
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="feature-item justify-content-end">
-                                    <div class="text-end me-4">
-                                        <h5 class="mb-3">Quality at Minimum</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
-                                    </div>
-                                    <div class="feature-icon">
-                                        <span class="fa fa-tag fa-2x"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="feature-item justify-content-end">
-                                    <div class="text-end me-4">
-                                        <h5 class="mb-3">Free Pick-Up & Drop-Off</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
-                                    </div>
-                                    <div class="feature-icon">
-                                        <span class="fa fa-map-pin fa-2x"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       @include('PartialViews.Features')
         <!-- Features End -->
 
         <!-- Fact Counter -->
@@ -321,7 +223,7 @@
             </div>
         </div>
         <!-- Footer End -->
-        
+
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
@@ -342,9 +244,9 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-        
+
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -353,7 +255,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

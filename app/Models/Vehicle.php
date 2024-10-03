@@ -14,8 +14,8 @@ class Vehicle extends Model
     'Motor_ID',
     'Color_ID',
     'Condition_ID',
-    'price',
-    'photo'];
+    'Price',
+    'Photo'];
 
     use HasFactory;
 

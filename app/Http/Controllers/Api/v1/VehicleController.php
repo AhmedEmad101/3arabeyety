@@ -32,4 +32,11 @@ class VehicleController extends Controller
         $Vehicle = Vehicle::where('id',$id)->first();
         return $Vehicle->CarModel->Name??'NoCarModel';
     }
+    public function SearchByPriceRange($MinPrice,$MaxPrice)
+    {
+        $Vehicle = Vehicle::where('price','>=',$MinPrice)
+        ->where('price','<=',$MaxPrice)->get();
+        return $Vehicle??'NoResults';
+    }
+
 }
