@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   @include('PartialViews.Head')
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        @include('PartialViews.Topbar')
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        @include('PartialViews.navbar')
+
+        @include('PartialViews.Carousel')
+
+        <!-- Features Start -->
+       @include('PartialViews.Features')
+        <!-- Features End -->
+
+        <!-- About Start -->
+       @include('PartialViews.About')
+        <!-- About End -->
+
+        <!-- Fact Counter -->
+        <div class="container-fluid counter bg-secondary py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="counter-item text-center">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-thumbs-up fa-2x"></i>
+                            </div>
+                            <div class="counter-counting my-3">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">829</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                            <h4 class="text-white mb-0">Happy Clients</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="counter-item text-center">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-car-alt fa-2x"></i>
+                            </div>
+                            <div class="counter-counting my-3">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">56</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                            <h4 class="text-white mb-0">Number of Cars</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="counter-item text-center">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-building fa-2x"></i>
+                            </div>
+                            <div class="counter-counting my-3">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">127</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                            <h4 class="text-white mb-0">Car Center</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="counter-item text-center">
+                            <div class="counter-item-icon mx-auto">
+                                <i class="fas fa-clock fa-2x"></i>
+                            </div>
+                            <div class="counter-counting my-3">
+                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">589</span>
+                                <span class="h1 fw-bold text-white">+</span>
+                            </div>
+                            <h4 class="text-white mb-0">Total kilometers</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fact Counter -->
+
+        <!-- Services Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Services</span></h1>
+                    <p class="mb-0">Services
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item p-4">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-phone-alt fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Phone Reservation</h5>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item p-4">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-money-bill-alt fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Special Rates</h5>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item p-4">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-road fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">One Way Rental</h5>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item p-4">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-umbrella fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Life Insurance</h5>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item p-4">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-building fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">City to City</h5>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item p-4">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-car-alt fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Free Rides</h5>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
+
+        <!-- Car categories Start -->
+       @include('PartialViews.CarsList')
+        <!-- Car categories End -->
+
+        <!-- Car Steps Start -->
+        <div class="container-fluid steps py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h1 class="display-5 text-capitalize text-white mb-3">Cental<span class="text-primary"> Process</span></h1>
+                    <p class="mb-0 text-white">Our Process
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="steps-item p-4 mb-4">
+                            <h4>Come In Contact</h4>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!</p>
+                            <div class="setps-number">01.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="steps-item p-4 mb-4">
+                            <h4>Choose A Car</h4>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!</p>
+                            <div class="setps-number">02.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="steps-item p-4 mb-4">
+                            <h4>Enjoy Driving</h4>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!</p>
+                            <div class="setps-number">03.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Car Steps End -->
+
+        <!-- Blog Start -->
+@include('PartialViews.Blog')
+        <!-- Blog End -->
+
+        <!-- Banner Start -->
+        <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
+            <div class="container pb-5">
+                <div class="banner-item rounded">
+                    <img src="img/banner-1.jpg" class="img-fluid rounded w-100" alt="">
+                    <div class="banner-content">
+                        <h2 class="text-primary">Rent Your Car</h2>
+                        <h1 class="text-white">Interested in Renting?</h1>
+                        <p class="text-white">Don't hesitate and send us a message.</p>
+                        <div class="banner-btn">
+                            <a href="#" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">WhatchApp</a>
+                            <a href="#" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
+
+        <!-- Team Start -->
+       @include('PartialViews.Team')
+        <!-- Team End -->
+
+        <!-- Testimonial Start -->
+    @include('PartialViews.Testimonial')
+        <!-- Testimonial End -->
+
+        <!-- Footer Start -->
+        @include('PartialViews.Footer')
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    </body>
+
+</html>
