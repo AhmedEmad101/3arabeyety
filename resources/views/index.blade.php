@@ -94,7 +94,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
              window.location.assign('home');
            // window.location.href = 'dashboard';
         } else {
-            alert(result.error);
+            alert('wrong credentials');
         }
     } catch (error) {
         console.error('Login error', error);

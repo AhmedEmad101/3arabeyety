@@ -25,8 +25,36 @@ class VehicleController extends Controller
         // Pass the data to the Blade view
         return view('Home', compact('users'));
     }
+    public function MultipleSearch(Request $request)
+{
 
-    public function search(Request $request,$Model_ID,$Tank_ID,$Owner_ID,$Transimision_ID,$Type_ID,$Motor_ID,$Color_ID,$Condition_ID)
+    $Vehicles = Vehicle::where('Type_ID', $request->Type_ID)
+    ->when($request->Model_ID, function($query) {
+        $query->where('Model_ID', request()->Model_ID);
+    })
+    ->when($request->Tank_ID, function($query) {
+        $query->where('Tank_ID',request()->Tank_ID);
+    })
+    ->when($request->ownerID, function($query) {
+        $query->where('Owner_ID',request()->ownerID );
+    })
+    ->when($request->Transimision_ID, function($query) {
+        $query->Where('Transimision_ID',request()->Transimision_ID);
+    })->
+    when($request->Motor, function($query) {
+        $query->Where('Motor_ID','<=',request()->Motor);
+    })->when($request->Color_ID, function($query) {
+        $query->Where('Color_ID',request()->Color_ID);
+    })->when($request->Condition_ID, function($query) {
+        $query->Where('Condition_ID',request()->Condition_ID);
+    })
+    ->paginate(5);
+
+   return view('PartialViews.CarsList',['Vehicles'=>$Vehicles,'ItemsNumber'=>$Vehicles->count()]);
+
+}
+
+    public function search(Request $request)//test
     {
 
         $vehicle = Vehicle::where('id', '1')
@@ -52,51 +80,14 @@ class VehicleController extends Controller
         //sa7e7a->orderBy('created_at','desc')
         ->paginate(5);
     }
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(VehicleRequest $request)
     {
         $vehicle = Vehicle::create($request->validated());
         return redirect('home');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Vehicle $vehicle)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Vehicle $vehicle)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Vehicle $vehicle)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Vehicle $vehicle)
-    {
-        //
-    }
     public function searchprice(Request $request)
     {
         $minprice = (int)$request->minprice;
@@ -139,32 +130,5 @@ class VehicleController extends Controller
        $Details = Vehicle::where('id',$id)->first();
        return view('vehicledetails')->with(['Details'=> $Details]);
     }
-    public function MultipleSearch(Request $request)
-{
 
-    $Vehicles = Vehicle::where('Type_ID', $request->Type_ID)
-    ->when($request->Model_ID, function($query) {
-        $query->where('Model_ID', request()->Model_ID);
-    })
-    ->when($request->Tank_ID, function($query) {
-        $query->where('Tank_ID',request()->Tank_ID);
-    })
-    ->when($request->ownerID, function($query) {
-        $query->where('Owner_ID',request()->ownerID );
-    })
-    ->when($request->Transimision_ID, function($query) {
-        $query->Where('Transimision_ID',request()->Transimision_ID);
-    })->
-    when($request->Motor, function($query) {
-        $query->Where('Motor_ID','<=',request()->Motor);
-    })->when($request->Color_ID, function($query) {
-        $query->Where('Color_ID',request()->Color_ID);
-    })->when($request->Condition_ID, function($query) {
-        $query->Where('Condition_ID',request()->Condition_ID);
-    })
-    ->paginate(5);
-
-   return view('PartialViews.CarsList',['Vehicles'=>$Vehicles,'ItemsNumber'=>$Vehicles->count()]);
-
-}
 }
