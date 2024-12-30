@@ -265,7 +265,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-
+    <script src="{{asset('js/logout.js') }}"></script>
     </body>
 
 </html>
