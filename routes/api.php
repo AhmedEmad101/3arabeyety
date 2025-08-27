@@ -26,7 +26,9 @@ route::get('user/{id}',[UserController::class,'User']);
 route::get('allmotors',[MotorController::class,'index']);
 route::get('allvehiclemodels',[VehicleModelController::class,'index']);
 route::get('allusers',[UserController::class,'index']);
+////////////////////////////// Running C program by php /////////////////////////////////////////////
 route::get('rc',[UserController::class,'RunCProgram']);
+//////////////////////////////////////////////////////////////////////////////////////////////
 Route::get('search/{Model_ID}/{Tank_ID}/{Owner_ID}/{Transimision_ID}/{Type_ID}/{Motor_ID}/{Color_ID}/{Condition_ID}', [VehicleController::class, 'search']);
 route::Post('MakeAccount',[LoginController::class,'Signup']);
 //route::Post('login',[LoginController::class,'Login'])->middleware('auth:sanctum');
