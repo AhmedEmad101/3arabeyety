@@ -52,51 +52,14 @@ class VehicleController extends Controller
         //sa7e7a->orderBy('created_at','desc')
         ->paginate(5);
     }
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+   
     public function store(VehicleRequest $request)
     {
         $vehicle = Vehicle::create($request->validated());
         return redirect('home');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Vehicle $vehicle)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Vehicle $vehicle)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Vehicle $vehicle)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Vehicle $vehicle)
-    {
-        //
-    }
+  
     public function searchprice(Request $request)
     {
         $minprice = (int)$request->minprice;
