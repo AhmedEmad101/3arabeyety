@@ -16,15 +16,6 @@ class VehicleController extends Controller
     {
         $this->helper = $helper;
     }
-    public function index()
-    {
-        $response = Http::get(url('/api/all')); // Assuming you're using your own API endpoint
-
-        $users = $response->json(); // Get the JSON response
-
-        // Pass the data to the Blade view
-        return view('Home', compact('users'));
-    }
     public function MultipleSearch(Request $request)
 {
 
