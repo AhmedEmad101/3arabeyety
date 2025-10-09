@@ -36,12 +36,6 @@ The goal of **3arabeyety** is to simplify the process of **searching, finding, a
 - Api (only test routes)
 ---
 
-## 📱 Screenshots (Optional)
-
-_Add screenshots or a demo GIF here to showcase your UI._
-
----
-
 ## 🚀 Getting Started
 
 To run this project locally:
