@@ -5,7 +5,7 @@ use App\Http\Controllers\SignupController;
 use App\Http\Controllers\VehicleController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+Route::view('/','home');
 Route::view('Result','Results.Result');
 Route::view('searchpage','Results.search');
 Route::view('items','PartialViews.gptfrontend.listofitems');
